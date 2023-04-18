@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GG/static/css/main.e6842b99.css",
+    "main.js": "/GG/static/js/main.0eb7930a.js",
+    "index.html": "/GG/index.html",
+    "main.e6842b99.css.map": "/GG/static/css/main.e6842b99.css.map",
+    "main.0eb7930a.js.map": "/GG/static/js/main.0eb7930a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6842b99.css",
+    "static/js/main.0eb7930a.js"
+  ]
+}
