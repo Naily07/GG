@@ -1,0 +1,148 @@
+body{
+    background-color: rgb(0, 2, 95);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----------Container-----------*/
+body .contains{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: rgb(34, 0, 255);
+    box-shadow: 0px 0px 10px 20px rgba(0, 0, 0, 0.486);
+    /* width: 20rem; */
+}
+.diagonale{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+.diagonale::before{
+    position: absolute;
+    content: "";
+    height: 120%;
+    width: 10px;
+    top: 10%;
+    left: 10%;
+    transform-origin: top;
+    transform: rotate(-45deg);
+    background: rgb(0, 0, 0);
+}
+.diagonale::after{
+    position: absolute;
+    content: "";
+    height: 120%;
+    width: 10px;
+    left: 90%;
+    top: 8%;
+    transform-origin: top;
+    transform: rotate(45deg);
+    background: rgb(0, 0, 0);
+}
+body .main-bouton{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    border-radius: 3rem;
+    z-index: 0;
+    background-color: rgb(34, 188, 248);
+    height: 30rem;
+    width: 32rem;
+}
+
+.main-bouton::after{
+    position: absolute;
+    content: "";
+    height: 95%;
+    width: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgb(10, 10, 10);
+}
+
+.main-bouton::before{
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 95%;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgb(35, 31, 31);
+}
+.main-bouton .containBouton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    box-shadow: 0px 0px 5px 10px rgba(32, 31, 31, 0.495);
+    border-radius: 5rem;
+    z-index: 2;
+}
+/*--------------------------------*/
+/*-----------Bouton--------------*/
+
+.main-bouton .possible{
+    box-shadow: 0px 0px 10px 12px rgba(31, 31, 32, 0.767);
+
+    /* animation: 1s alternative ease-in-out alternate infinite; */
+}
+@keyframes alternative{
+    to{
+        box-shadow: 0px 0px 10px 12px rgba(32, 31, 31, 0.7);
+    }
+}
+.main-bouton .containBouton button{
+    border-radius: 5rem;
+}
+.main-bouton .containBouton  .icon {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.main-bouton .green{
+    transition: 1s ease-in-out;
+    background: rgb(219, 82, 23);
+}
+.main-bouton button:enabled .icon{
+    animation: 2s  enable infinite ease-in-out alternate-reverse;
+}
+.main-bouton button:disabled{
+    background-color: rgba(152, 152, 154, 0.668);
+}
+@keyframes enable {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.main-bouton .blue{
+    background: rgb(9, 153, 237);
+}
+.icon{
+    height: 2rem;
+    width: 3rem;
+}
+
+@media screen and (max-width:800px) {
+    body .main-bouton{
+        height: 15rem;
+        width: 16rem;
+        grid-gap: 0.5rem;
+    }
+    .main-bouton .containBouton button {
+        padding: .1rem;
+    }
+    .icon{
+        height: 1rem;
+        width: 1.5rem;
+    }
+}   
