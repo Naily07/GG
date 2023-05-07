@@ -113,9 +113,7 @@ body .main-bouton{
     transition: 1s ease-in-out;
     background: rgb(219, 82, 23);
 }
-.main-bouton button:enabled .icon{
-    animation: 2s  enable infinite ease-in-out alternate-reverse;
-}
+
 .main-bouton button:disabled{
     background-color: rgba(152, 152, 154, 0.668);
 }
